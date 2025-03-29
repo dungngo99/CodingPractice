@@ -1,4 +1,4 @@
-package Math;
+package org.example.Math;
 
 public class DomeRadius {
     public static void findRadius(int a, int h) {

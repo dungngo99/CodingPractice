@@ -1,4 +1,4 @@
-package Stack;
+package org.example.Stack;
 
 import java.util.Stack;
 import java.util.stream.Collectors;

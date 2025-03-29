@@ -1,7 +1,7 @@
-package Heap;
+package org.example.Heap;
 
-import java.util.PriorityQueue;
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class KSizedSubarray {
     public int[] findKSizedSubarray(int[] list, int k) {

@@ -1,6 +1,8 @@
-package Stack;
+package org.example.Stack;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Stack;
 
 public class MaxInWindow {
     public static void findMaxInWindow(int[] arrays, int w) {

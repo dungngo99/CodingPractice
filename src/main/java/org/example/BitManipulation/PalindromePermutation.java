@@ -1,6 +1,6 @@
-package BitManipulation;
+package org.example.BitManipulation;
 
-import java.util.*;
+import java.util.Locale;
 
 /*
  * Solution:

@@ -1,4 +1,4 @@
-package Array;
+package org.example.Array;
 
 import java.util.Arrays;
 
@@ -26,8 +26,8 @@ public class MaximumSubArraySum {
     }
 
     public static void main(String[] args) {
-        long[] array = new long[] { 1L, 5L, 9L };
-        array = new long[] { 1L, 2L, 3L };
+        long[] array = new long[]{1L, 5L, 9L};
+        array = new long[]{1L, 2L, 3L};
         System.out.println(MaximumSubArraySum.maximumSum(array, 4));
     }
 }

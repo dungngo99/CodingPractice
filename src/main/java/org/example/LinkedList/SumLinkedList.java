@@ -1,4 +1,4 @@
-package LinkedList;
+package org.example.LinkedList;
 
 public class SumLinkedList {
 	public static Node solution(Node node1, Node node2) {

@@ -1,8 +1,8 @@
-package Heap;
+package org.example.Heap;
 
-import java.util.Scanner;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 /*
  * A class to implement the "Median Maintenance" algorithm

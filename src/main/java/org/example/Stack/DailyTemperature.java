@@ -1,7 +1,7 @@
-package Stack;
+package org.example.Stack;
 
-import java.util.Stack;
 import java.util.Arrays;
+import java.util.Stack;
 
 /*
  * Given an array of daily temperatures, compute an array such that

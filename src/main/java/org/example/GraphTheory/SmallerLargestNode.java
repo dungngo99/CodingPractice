@@ -1,4 +1,4 @@
-package GraphTheory;
+package org.example.GraphTheory;
 
 public class SmallerLargestNode {
     public static int find(TreeNode node, int key) {

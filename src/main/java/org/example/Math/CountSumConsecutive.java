@@ -1,4 +1,4 @@
-package Math;
+package org.example.Math;
 
 public class CountSumConsecutive {
     public static int consecutive(long num){

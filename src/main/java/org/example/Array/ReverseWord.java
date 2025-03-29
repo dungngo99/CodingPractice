@@ -1,6 +1,12 @@
-package Array;
+package org.example.Array;
 
 public class ReverseWord {
+    public static void main(String[] args) {
+        ReverseWord solution = new ReverseWord();
+        System.out.println(solution.reverseStringExtraSpace("hello world"));
+        System.out.println(solution.reverseStringConstantSpace("I love java"));
+    }
+
     public String reverseStringExtraSpace(String word) {
         int i = 0;
         int j = word.length() - 1;
@@ -41,11 +47,5 @@ public class ReverseWord {
             start += 1;
             end -= 1;
         }
-    }
-
-    public static void main(String[] args) {
-        ReverseWord solution = new ReverseWord();
-        System.out.println(solution.reverseStringExtraSpace("hello world"));
-        System.out.println(solution.reverseStringConstantSpace("I love java"));
     }
 }

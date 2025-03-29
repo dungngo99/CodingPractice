@@ -1,9 +1,9 @@
-package Stack;
+package org.example.Stack;
 
 import java.util.Arrays;
-import java.util.Queue;
-import java.util.LinkedList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class RateLimiter {
     public static class MyObject{

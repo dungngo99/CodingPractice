@@ -1,8 +1,8 @@
-package Backtracking;
+package org.example.Backtracking;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WordSearch {
     public static boolean search(char[][] board, String word) {

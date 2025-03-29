@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,12 +1,19 @@
-package Array;
+package org.example.Array;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /*
- * Given an oscillating (nested) array, 
+ * Given an oscillating (nested) array,
  * we want to find the size of largest connected components
  */
 public class ComponentSizeInArrayNesting {
+    public static void main(String[] args) {
+        ComponentSizeInArrayNesting solution = new ComponentSizeInArrayNesting();
+        System.out.println(solution.arrayNesting(new int[]{5, 4, 0, 1, 3, 6, 2, 7, 8}));
+        System.out.println(solution.arrayNesting(new int[]{2, 1, 3, 5, 4, 6, 8, 7, 9, 0}));
+    }
+
     public int arrayNesting(int[] nums) {
         boolean[] visited = new boolean[nums.length];
         int res = 0;
@@ -36,11 +43,5 @@ public class ComponentSizeInArrayNesting {
             }
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        ComponentSizeInArrayNesting solution = new ComponentSizeInArrayNesting();
-        System.out.println(solution.arrayNesting(new int[] { 5, 4, 0, 1, 3, 6, 2, 7, 8 }));
-        System.out.println(solution.arrayNesting(new int[] { 2, 1, 3, 5, 4, 6, 8, 7, 9, 0 }));
     }
 }

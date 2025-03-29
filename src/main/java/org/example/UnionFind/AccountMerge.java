@@ -1,4 +1,4 @@
-package UnionFind;
+package org.example.UnionFind;
 
 public class AccountMerge {
     public void solution(){

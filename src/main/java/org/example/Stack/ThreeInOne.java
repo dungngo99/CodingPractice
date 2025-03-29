@@ -1,4 +1,4 @@
-package Stack;
+package org.example.Stack;
 
 import java.util.Arrays;
 import java.util.Random;

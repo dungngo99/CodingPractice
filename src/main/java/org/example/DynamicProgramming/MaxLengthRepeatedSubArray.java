@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class MaxLengthRepeatedSubArray {
     public int findLengthByEnd(int[] A, int[] B){

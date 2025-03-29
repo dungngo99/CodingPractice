@@ -1,10 +1,6 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /*
  * Runtime: O(m^2*n) with m=value of targetSum, n=length of list of numbers

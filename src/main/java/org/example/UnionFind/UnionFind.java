@@ -1,4 +1,4 @@
-package UnionFind;
+package org.example.UnionFind;
 
 import java.util.Arrays;
 

@@ -1,8 +1,17 @@
-package Array;
+package org.example.Array;
 
-import java.util.*;
+import java.util.List;
 
 public class CountItemMatching {
+    public static void main(String[] args) {
+        CountItemMatching countItemMatching = new CountItemMatching();
+        countItemMatching.countMatches(
+                List.of(
+                        List.of("1", "2"),
+                        List.of("3", "4")),
+                "halo", "123");
+    }
+
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int count = 0;
         for (int i = 0; i < items.size(); i++) {
@@ -21,14 +30,5 @@ public class CountItemMatching {
             }
         }
         return count;
-    }
-
-    public static void main(String[] args) {
-        CountItemMatching countItemMatching = new CountItemMatching();
-        countItemMatching.countMatches(
-                List.of(
-                        List.of("1", "2"),
-                        List.of("3", "4")),
-                "halo", "123");
     }
 }

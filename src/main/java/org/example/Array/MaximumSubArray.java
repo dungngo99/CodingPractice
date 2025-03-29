@@ -1,6 +1,12 @@
-package Array;
+package org.example.Array;
 
 public class MaximumSubArray {
+    public static void main(String[] args) {
+        MaximumSubArray solution = new MaximumSubArray();
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(solution.solution(nums));
+    }
+
     public int solution(int[] nums) {
         int res = nums[0];
         int cSum = res;
@@ -13,11 +19,5 @@ public class MaximumSubArray {
             res = Math.max(res, cSum);
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        MaximumSubArray solution = new MaximumSubArray();
-        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-        System.out.println(solution.solution(nums));
     }
 }

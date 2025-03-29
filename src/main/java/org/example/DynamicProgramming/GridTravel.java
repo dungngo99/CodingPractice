@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class GridTravel {
     public int findGridTravel(int row, int col) {

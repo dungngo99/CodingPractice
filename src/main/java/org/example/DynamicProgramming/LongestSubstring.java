@@ -1,6 +1,7 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LongestSubstring {
     public int lengthOfLongestSubstring(String s) {

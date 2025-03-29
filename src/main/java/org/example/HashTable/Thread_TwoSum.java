@@ -1,8 +1,8 @@
-package HashTable;
+package org.example.HashTable;
 
 import java.util.ArrayList;
-import java.util.concurrent.*;
 import java.util.List;
+import java.util.concurrent.*;
 
 public class Thread_TwoSum implements Callable<Integer>{
   private TwoSum twoSum;

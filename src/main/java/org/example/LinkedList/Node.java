@@ -1,4 +1,4 @@
-package LinkedList;
+package org.example.LinkedList;
 
 import java.util.StringJoiner;
 

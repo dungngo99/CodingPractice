@@ -1,6 +1,12 @@
-package Array;
+package org.example.Array;
 
 public class matrixRotation {
+    public static void main(String[] args) {
+        int[][] m1 = new int[][]{{0, 1, 0, 0}, {0, 0, 0, 1}, {0, 1, 0, 0}, {0, 1, 1, 1}};
+        int[][] m2 = new int[][]{{0, 1, 0, 1}, {0, 0, 0, 1}, {1, 0, 1, 1}, {0, 0, 0, 0}};
+        System.out.println(new matrixRotation().findRotation(m1, m2));
+    }
+
     public boolean findRotation(int[][] mat, int[][] target) {
         for (int i = 0; i < 4; i++) {
             rotate(mat);
@@ -35,11 +41,5 @@ public class matrixRotation {
             }
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        int[][] m1 = new int[][] { { 0, 1, 0, 0 }, { 0, 0, 0, 1 }, { 0, 1, 0, 0 }, { 0, 1, 1, 1 } };
-        int[][] m2 = new int[][] { { 0, 1, 0, 1 }, { 0, 0, 0, 1 }, { 1, 0, 1, 1 }, { 0, 0, 0, 0 } };
-        System.out.println(new matrixRotation().findRotation(m1, m2));
     }
 }

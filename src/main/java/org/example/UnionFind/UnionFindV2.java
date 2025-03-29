@@ -1,10 +1,6 @@
-package UnionFind;
+package org.example.UnionFind;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UnionFindV2 {
     public static boolean isLeader(int[] union, int node) {

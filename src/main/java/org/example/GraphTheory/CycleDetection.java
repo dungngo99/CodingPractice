@@ -1,4 +1,4 @@
-package GraphTheory;
+package org.example.GraphTheory;
 
 public class CycleDetection {
 

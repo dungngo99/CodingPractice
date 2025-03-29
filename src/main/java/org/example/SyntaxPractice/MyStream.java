@@ -1,4 +1,4 @@
-package SyntaxPractice;
+package org.example.SyntaxPractice;
 
 public class MyStream {
     public static void main(final String[] args) {

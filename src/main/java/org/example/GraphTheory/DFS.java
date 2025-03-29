@@ -1,4 +1,4 @@
-package GraphTheory;
+package org.example.GraphTheory;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,6 +1,7 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Subsets {
     public List<List<Integer>> subsets(int[] nums) {

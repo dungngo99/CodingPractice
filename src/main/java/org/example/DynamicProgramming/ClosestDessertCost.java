@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class ClosestDessertCost {
     private int res = 0;

@@ -1,4 +1,4 @@
-package Array;
+package org.example.Array;
 
 /*
  * Problem: given two strings s1 and s2, check if s2 is a rotation of s1

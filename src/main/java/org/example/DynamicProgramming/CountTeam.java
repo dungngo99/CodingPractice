@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class CountTeam {
     public int numTeams(int[] rating) {

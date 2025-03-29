@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 /*
  * We have a grid=(n,n), start=(n-1,0), end=(0,n-1).

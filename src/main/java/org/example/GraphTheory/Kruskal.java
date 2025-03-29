@@ -1,14 +1,10 @@
-package GraphTheory;
+package org.example.GraphTheory;
+
+import org.example.UnionFind.UnionFind;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
-
-import UnionFind.UnionFind;
+import java.util.*;
 
 public class Kruskal {
     private int N;

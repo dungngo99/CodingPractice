@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class CanConstructString {
     public static boolean bottomUp(String target, String[] wordBank) {

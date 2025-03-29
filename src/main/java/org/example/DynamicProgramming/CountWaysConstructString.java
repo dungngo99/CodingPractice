@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class CountWaysConstructString {
     public int findCountConstruct(String target, String[] wordBank) {

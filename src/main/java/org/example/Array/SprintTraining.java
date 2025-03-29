@@ -1,4 +1,4 @@
-package Array;
+package org.example.Array;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,6 +9,11 @@ import java.util.List;
  * Way 2, mark start and end different -> when reach end (indicate that we finish 1 training sprint)
  */
 public class SprintTraining {
+    public static void main(String[] args) {
+        SprintTraining sprintTraining = new SprintTraining();
+        System.out.println(sprintTraining.solution(Arrays.asList(1, 2, 3, 4), 7));
+    }
+
     public int solution(List<Integer> sprints, int size) {
         int[] tracks = new int[size];
 
@@ -35,10 +40,5 @@ public class SprintTraining {
             }
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        SprintTraining sprintTraining = new SprintTraining();
-        System.out.println(sprintTraining.solution(Arrays.asList(1, 2, 3, 4), 7));
     }
 }

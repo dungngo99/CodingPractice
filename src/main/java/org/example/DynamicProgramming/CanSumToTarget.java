@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
 public class CanSumToTarget {
     public boolean bottomUp(int value, int[] nums) {

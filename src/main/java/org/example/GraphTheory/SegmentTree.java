@@ -1,4 +1,4 @@
-package GraphTheory;
+package org.example.GraphTheory;
 
 interface SegmentTreeNode {
     public int[] range = new int[2];

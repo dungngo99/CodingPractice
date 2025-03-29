@@ -1,8 +1,20 @@
-package Array;
+package org.example.Array;
 
 import java.util.Arrays;
 
 public class ShortestUnsortedSubArray {
+    public static void main(String[] args) {
+        ShortestUnsortedSubArray solution = new ShortestUnsortedSubArray();
+        int[] list = new int[]{2, 6, 4, 8, 10, 9, 15};
+        System.out.println(solution.findUnsortedSubarray(list));
+
+        list = new int[]{1, 2, 3, 4, 5, 6};
+        System.out.println(solution.findUnsortedSubarray(list));
+
+        list = new int[]{1, 4, 2, 1, 4, 6, 2, 7, 24, 5, 3, 236, 7, 3, 5, 3, 43, 2};
+        System.out.println(solution.findUnsortedSubarray(list));
+    }
+
     public int findUnsortedSubarray(int[] nums) {
         int i = 0;
         int j = nums.length - 1;
@@ -42,17 +54,5 @@ public class ShortestUnsortedSubArray {
         }
 
         return count;
-    }
-
-    public static void main(String[] args) {
-        ShortestUnsortedSubArray solution = new ShortestUnsortedSubArray();
-        int[] list = new int[] { 2, 6, 4, 8, 10, 9, 15 };
-        System.out.println(solution.findUnsortedSubarray(list));
-
-        list = new int[] { 1, 2, 3, 4, 5, 6 };
-        System.out.println(solution.findUnsortedSubarray(list));
-
-        list = new int[] { 1, 4, 2, 1, 4, 6, 2, 7, 24, 5, 3, 236, 7, 3, 5, 3, 43, 2 };
-        System.out.println(solution.findUnsortedSubarray(list));
     }
 }

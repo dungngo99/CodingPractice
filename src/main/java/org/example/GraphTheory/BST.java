@@ -1,4 +1,4 @@
-package GraphTheory;
+package org.example.GraphTheory;
 
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;

@@ -1,6 +1,7 @@
-package DynamicProgramming;
+package org.example.DynamicProgramming;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * Given an 2D array, we start at (0,0) and end at (x,y). We can move vertically down or horizontally right
