@@ -139,7 +139,6 @@ public class PaintGrid {
             int[] c = action.fourCoords;
             drawRectangle(c[0], c[1], c[2], c[3], color);
         }
-        redoStack.push(action);
     }
 
     /**
