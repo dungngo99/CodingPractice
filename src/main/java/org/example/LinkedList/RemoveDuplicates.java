@@ -14,6 +14,7 @@ class RemoveDuplicates {
             if (set.contains(cur.data)) {
                 prev.next = cur.next;
                 cur = cur.next;
+
             } else {
                 set.add(cur.data);
                 prev = cur;
