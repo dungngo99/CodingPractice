@@ -66,9 +66,9 @@ public class PaintGrid {
         drawCell(i, j, color, true);
     }
 
-    private void drawCell(int i, int j, char color, boolean isTrack) {
+    private void drawCell(int i, int j, char color, boolean isDo) {
         grid[i][j] = color;
-        if (isTrack) {
+        if (isDo) {
             redoStack.push(new Action("drawCell", color, new int[]{i, j}, null));
         }
     }
@@ -85,7 +85,7 @@ public class PaintGrid {
         drawRectangle(i1, j1, i2, j2, color, true);
     }
 
-    private void drawRectangle(int i1, int j1, int i2, int j2, char color, boolean isTrack) {
+    private void drawRectangle(int i1, int j1, int i2, int j2, char color, boolean isDo) {
         int minX = Math.min(i1, i2);
         int maxX = Math.max(i1, i2);
         int minY = Math.min(j1, j2);
@@ -95,7 +95,7 @@ public class PaintGrid {
                 grid[i][j] = color;
             }
         }
-        if (isTrack) {
+        if (isDo) {
             redoStack.push(new Action("drawRectangle", color, null, new int[]{i1, j1, i2, j2}));
         }
     }
@@ -110,14 +110,13 @@ public class PaintGrid {
         }
         Action action = redoStack.pop();
         String actionType = action.actionType;
-        System.out.println(action);
         if (Objects.equals(actionType, "drawCell")) {
             int[] c = action.twoCoords;
-            drawCell(c[0], c[1], 'W', false); // because revert, no need to add to redo stack
+            drawCell(c[0], c[1], 'W', false); // because undo, no need to add to redo stack
             undoStack.push(new Action(actionType, action.color, new int[]{c[0], c[1]}, null));
         } else {
             int[] c = action.fourCoords;
-            drawRectangle(c[0], c[1], c[2], c[3], 'W', false); // because revert, no need to add to redo stack
+            drawRectangle(c[0], c[1], c[2], c[3], 'W', false); // because undo, no need to add to redo stack
             undoStack.push(new Action(actionType, action.color, null, new int[]{c[0], c[1], c[2], c[3]}));
         }
     }
@@ -168,25 +167,35 @@ public class PaintGrid {
     public static void main(String[] args) {
         System.out.println("\n Begin to pain the grid.....\n");
         PaintGrid pg = new PaintGrid(3, 3);
+
         System.out.println("\n Draw cell....\n");
         pg.drawCell(0, 0, 'R');
+
         System.out.println("\n Draw rectangle...\n");
         pg.drawRectangle(1, 1, 2, 2, 'B');
+
         System.out.println("\n Print the grid...\n");
         pg.paint();
+
         System.out.println("\n Undo grid (twice)...\n");
         pg.undo();
         pg.undo();
+
         System.out.println("\n Print the grid (p2)...\n");
         pg.paint();
+
         System.out.println("\n Redo grid (once)...\n");
         pg.redo();
+
         System.out.println("\n Draw cell....\n");
         pg.drawCell(2,0, 'B');
+
         System.out.println("\n Print the grid (p3)...\n");
         pg.paint();
+
         System.out.println("\n Clear the grid...\n");
         pg.clear();
+
         System.out.println("\n Print the grid (p4)...\n");
         pg.paint();
     }
