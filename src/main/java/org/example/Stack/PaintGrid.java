@@ -5,12 +5,18 @@ import java.util.Objects;
 import java.util.Stack;
 
 public class PaintGrid {
+    public enum DrawType {
+        CELL,
+        RECTANGLE
+    }
+
     public static class Action {
-        private final String actionType;
+        private final DrawType actionType;
         private final int[] twoCoords;
         private final int[] fourCoords;
         private final char color;
-        public Action(String actionType, char color, int[] twoCoords, int[] fourCoords) {
+
+        public Action(DrawType actionType, char color, int[] twoCoords, int[] fourCoords) {
             this.actionType = actionType;
             this.color = color;
             this.twoCoords = twoCoords;
@@ -69,7 +75,7 @@ public class PaintGrid {
     private void drawCell(int i, int j, char color, boolean isDo) {
         grid[i][j] = color;
         if (isDo) {
-            redoStack.push(new Action("drawCell", color, new int[]{i, j}, null));
+            redoStack.push(new Action(DrawType.CELL, color, new int[]{i, j}, null));
         }
     }
 
@@ -96,7 +102,7 @@ public class PaintGrid {
             }
         }
         if (isDo) {
-            redoStack.push(new Action("drawRectangle", color, null, new int[]{i1, j1, i2, j2}));
+            redoStack.push(new Action(DrawType.RECTANGLE, color, null, new int[]{i1, j1, i2, j2}));
         }
     }
 
@@ -109,8 +115,8 @@ public class PaintGrid {
             return;
         }
         Action action = redoStack.pop();
-        String actionType = action.actionType;
-        if (Objects.equals(actionType, "drawCell")) {
+        DrawType actionType = action.actionType;
+        if (Objects.equals(actionType, DrawType.CELL)) {
             int[] c = action.twoCoords;
             drawCell(c[0], c[1], 'W', false); // because undo, no need to add to redo stack
             undoStack.push(new Action(actionType, action.color, new int[]{c[0], c[1]}, null));
@@ -130,9 +136,9 @@ public class PaintGrid {
             return;
         }
         Action action = undoStack.pop();
-        String actionType = action.actionType;
+        DrawType actionType = action.actionType;
         char color = action.color;
-        if (Objects.equals(actionType, "drawCell")) {
+        if (Objects.equals(actionType, DrawType.CELL)) {
             int[] c = action.twoCoords;
             drawCell(c[0], c[1], color);
         } else {
