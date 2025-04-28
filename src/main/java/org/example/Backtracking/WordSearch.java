@@ -35,7 +35,7 @@ public class WordSearch {
                 .filter(a -> 0 <= a[0] && a[0] < row && 0 <= a[1] && a[1] < col)
                 .filter(a -> board[a[0]][a[1]] == word.charAt(i + 1))
                 .filter(a -> !visited[a[0]][a[1]])
-                .collect(Collectors.toList());
+                .toList();
 
         for (int[] neighbor : neighbors) {
             if (dfs(neighbor, board, visited, i + 1, word)) {
